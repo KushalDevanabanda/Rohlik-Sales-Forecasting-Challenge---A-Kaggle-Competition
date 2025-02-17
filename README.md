@@ -12,6 +12,8 @@ We did not finish with a great rank, but we had a lot of fun and learnt a lot wh
 
 You can find the final submission in the link given here: https://www.kaggle.com/code/venkytheknown/team-403-rohlik-sales-forecasting
 
+You can find the competition details in the link give here: https://www.kaggle.com/competitions/rohlik-sales-forecasting-challenge-v2/overview
+
 **Final Submission**
 LightGBM-based model was utilized with feature engineering that incorporates temporal patterns, seasonal trends, and specific store behaviors. Key features include date-related attributes, warehouse-specific conditions, and custom lag features for sales data. Additionally, a critical improvement is made by integrating the year-over-year sales growth, considering the natural increase in sales over time, which helps the model account for long-term trends.
 
