@@ -9,6 +9,12 @@ I participated in this competition along with my two friends Venky and Vishnu. W
 We did not finish with a great rank, but we had a lot of fun and learnt a lot while working on this challenge.
 
 **Final Result:** 271 out of 777. Public score: **20.86121**, Private score: **20.24298**.
-You find the final submission Here.
 
-Final Submission
+You can find the final submission in the link given here: https://www.kaggle.com/code/venkytheknown/team-403-rohlik-sales-forecasting
+
+**Final Submission**
+LightGBM-based model was utilized with feature engineering that incorporates temporal patterns, seasonal trends, and specific store behaviors. Key features include date-related attributes, warehouse-specific conditions, and custom lag features for sales data. Additionally, a critical improvement is made by integrating the year-over-year sales growth, considering the natural increase in sales over time, which helps the model account for long-term trends.
+
+We have used other gradient-boosting methods like XGBoost and CatBoost method but found that LighGBM results were more accurate.
+
+
