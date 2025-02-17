@@ -24,13 +24,18 @@ One significant enhancement that we worked on was adjusting the model prediction
 We missed/failed to use some of the lag features and conversions that we did in our other models like using moving averages to fill in null values in sales and orders columns and converting sales to log function in order to include all outliers rather than removing them. We believe that using them could have improved our scores.
 Nevertheless, what is done is done, and we are happy with what we achieved in this challenge.
 
-**Key Takeaways**
+**Approaches that did not work for us**
 
 1. We observed that increasing features in the model did not improve our prediction results.
 2. Using MAE to train our model gave terrible results for some reason. (But some teams reported gains.)
 3. Adding the cosine and the sine functions to time-based features led to worse results. (But some teams reported gains.)
 
-**Conclusion**
+**Key Takeaways**
 
+1. Decision tree models are generally not very good at extrapolating.
+2. Using the multiplier at the end for our results gave us great improvements to our final score.
+
+We have attached our final file to this GitHub repository. We have also attached other models that we created and experimented with for your reference.
+We hope our work proves helpful in generating new ideas and methods of approach and help in any way possible.
 
 
