@@ -22,6 +22,15 @@ One significant enhancement that we worked on was adjusting the model prediction
 **Missed Oppurtunities**
 
 We missed/failed to use some of the lag features and conversions that we did in our other models like using moving averages to fill in null values in sales and orders columns and converting sales to log function in order to include all outliers rather than removing them. We believe that using them could have improved our scores.
-Nevertheless, what is done is done, and we are happy with what we acheived in this challenge.
+Nevertheless, what is done is done, and we are happy with what we achieved in this challenge.
+
+**Key Takeaways**
+
+1. We observed that increasing features in the model did not improve our prediction results.
+2. Using MAE to train our model gave terrible results for some reason. (But some teams reported gains.)
+3. Adding the cosine and the sine functions to time-based features led to worse results. (But some teams reported gains.)
+
+**Conclusion**
+
 
 
