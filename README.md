@@ -19,6 +19,8 @@ LightGBM-based model was utilized with feature engineering that incorporates tem
 
 We have used other gradient-boosting methods like XGBoost and CatBoost method but found that LighGBM results were more accurate.
 
+Also, We think integrating the three model results such as (Cat boost, Light GBM, XG boost) would have given better CV but missed to do it. 
+
 One significant enhancement that we worked on was adjusting the model predictions based on the observed sales growth over the years. By multiplying the model’s output by a calculated sales change multiplier (1.05), we accounted for the general upward sales trend. This adjustment led to a more accurate prediction, especially when tested on future data.
 
 **Missed Oppurtunities**
