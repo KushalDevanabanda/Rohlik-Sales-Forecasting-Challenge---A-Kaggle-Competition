@@ -4,87 +4,143 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rohlik Sales Forecasting Challenge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f7fafc;
+      color: #1a202c;
     }
-    h1, h2, h3 {
-      color: #333;
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #2b6cb0;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #2d3748;
+    }
+
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
     a {
-      color: #1a73e8;
+      color: #3182ce;
       text-decoration: none;
+      font-weight: 500;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     .download-button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background-color: #1a73e8;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #2b6cb0;
       color: white;
+      font-weight: 600;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 6px;
+      transition: background 0.2s ease;
     }
+
     .download-button:hover {
-      background-color: #155ab6;
+      background-color: #2c5282;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #e6fffa;
+      color: #2c7a7b;
+      padding: 3px 8px;
+      margin-left: 8px;
+      font-size: 0.8rem;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <h1>Rohlik Sales Forecasting Challenge</h1>
-  <a class="download-button" href="Rohlik%20Sales%20Forecasting%20Challenge%20-%20Team403.zip" download>
-    📦 Download Files Here
-  </a>
-  <p>
-    The <strong>Rohlik Sales Forecasting Challenge</strong> on Kaggle tasks participants with predicting sales of online groceries. Using historical sales data, competitors create models to forecast demand, optimizing inventory, pricing, and promotions.
-  </p>
-  <p>
-    Rohlik Group, a leading European e-grocery innovator, operates across 11 warehouses in Czech Republic, Germany, Austria, Hungary, and Romania. This challenge focuses on predicting the sales of each selected warehouse inventory for the next 14 days.
-  </p>
-  <p>
-    I participated in this competition with my friends Venkatesh and Vishnu. While we didn’t rank high, we had a lot of fun and learned a lot.
-  </p>
-  <p><strong>Final Result:</strong> 271 out of 777. Public score: 20.86121, Private score: 20.24298.</p>
-  <p>
-    🔗 <a href="https://www.kaggle.com/code/venkytheknown/team-403-rohlik-sales-forecasting" target="_blank">Final Submission on Kaggle</a><br>
-    🔗 <a href="https://www.kaggle.com/competitions/rohlik-sales-forecasting-challenge-v2/overview" target="_blank">Competition Overview</a>
-  </p>
-  <p>
-    Our final submission used a LightGBM-based model with features like temporal patterns, seasonal trends, and warehouse-specific behaviors. We also added a multiplier (1.05) to account for year-over-year sales growth.
-  </p>
-  <p>
-    We tried XGBoost and CatBoost, but LightGBM gave better results. We believe combining all three could have further improved our CV scores.
-  </p>
+  <div class="container">
+    <h1>📈 Rohlik Sales Forecasting Challenge</h1>
 
-  <h3>Missed Opportunities</h3>
-  <ul>
-    <li>We skipped lag features and log transformations that had helped in other models.</li>
-    <li>Using moving averages to fill nulls could have helped.</li>
-  </ul>
+    <p>
+      The <strong>Rohlik Sales Forecasting Challenge</strong> on Kaggle tasked participants with predicting online grocery sales using historical data. The goal was to build time-series models to optimize inventory, pricing, and promotion strategies.
+    </p>
 
-  <h3>Approaches That Didn’t Work</h3>
-  <ul>
-    <li>Adding more features didn’t help</li>
-    <li>Training on MAE gave bad results</li>
-    <li>Cosine/sine time features worsened performance</li>
-  </ul>
+    <p>
+      Rohlik Group, a leading European e-grocery innovator, operates across 11 warehouses in Czech Republic, Germany, Austria, Hungary, and Romania. This challenge focused on forecasting sales at each warehouse for the next 14 days.
+    </p>
 
-  <h3>Key Takeaways</h3>
-  <ul>
-    <li>Decision trees struggle with extrapolation</li>
-    <li>Our simple multiplier adjustment gave solid improvements</li>
-  </ul>
+    <p>
+      I participated in this competition with my friends Venkatesh and Vishnu. Though we didn't rank near the top, we had a great time and learned a lot.
+    </p>
 
-  <p>
-    We’ve attached our final file and other models in this GitHub repo. We hope this helps others in their forecasting work!
-  </p>
-  
+    <p><strong>Final Result:</strong> 271 / 777 <span class="badge">Public: 20.86</span> <span class="badge">Private: 20.24</span></p>
+
+    <p>
+      🔗 <a href="https://www.kaggle.com/code/venkytheknown/team-403-rohlik-sales-forecasting" target="_blank">Final Submission on Kaggle</a><br>
+      🔗 <a href="https://www.kaggle.com/competitions/rohlik-sales-forecasting-challenge-v2/overview" target="_blank">Competition Overview</a>
+    </p>
+
+    <p>
+      Our final model used <strong>LightGBM</strong> with features like date parts, lag features, and warehouse-specific patterns. A custom sales growth multiplier (1.05) improved forecast accuracy by accounting for long-term sales trends.
+    </p>
+
+    <p>
+      We also experimented with <strong>XGBoost</strong> and <strong>CatBoost</strong>, but LightGBM performed best. We believe blending all three might have improved our CV.
+    </p>
+
+    <h3>🧪 Missed Opportunities</h3>
+    <ul>
+      <li>Skipped moving averages and log transformation of sales</li>
+      <li>Didn’t integrate multiple models for ensembling</li>
+    </ul>
+
+    <h3>🚫 What Didn’t Work</h3>
+    <ul>
+      <li>Adding more features didn’t help</li>
+      <li>Training on MAE caused poor results</li>
+      <li>Using sine/cosine on time features hurt performance</li>
+    </ul>
+
+    <h3>✅ Key Takeaways</h3>
+    <ul>
+      <li>Decision tree models don’t extrapolate well</li>
+      <li>Applying a post-prediction multiplier improved accuracy</li>
+    </ul>
+
+    <p>
+      You can download our final submission and supporting models here:
+    </p>
+
+    <a class="download-button" href="Rohlik%20Sales%20Forecasting%20Challenge%20-%20Team403.zip" download>
+      📦 Download Files Here
+    </a>
+  </div>
 </body>
 </html>
