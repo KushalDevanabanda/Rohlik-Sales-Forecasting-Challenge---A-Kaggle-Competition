@@ -11,56 +11,81 @@
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
+      background-color: #f9f9f9;
     }
-    h1, h2 {
+    h1, h2, h3 {
       color: #333;
     }
-    .download-btn {
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .download-button {
       display: inline-block;
-      margin: 20px 0;
-      padding: 12px 18px;
-      background-color: #007acc;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #1a73e8;
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      font-weight: bold;
     }
-    .download-btn:hover {
-      background-color: #005fa3;
+    .download-button:hover {
+      background-color: #155ab6;
     }
   </style>
 </head>
 <body>
-  <h1>Rohlik Sales Forecasting Challenge — A Kaggle Competition</h1>
-  <p><strong>Author:</strong> Kushal Devanabanda</p>
+  <h1>Rohlik Sales Forecasting Challenge</h1>
 
-  <p>This repository contains all the code and models developed for the Rohlik Sales Forecasting Kaggle Challenge.</p>
+  <p>
+    The <strong>Rohlik Sales Forecasting Challenge</strong> on Kaggle tasks participants with predicting sales of online groceries. Using historical sales data, competitors create models to forecast demand, optimizing inventory, pricing, and promotions.
+  </p>
+  <p>
+    Rohlik Group, a leading European e-grocery innovator, operates across 11 warehouses in Czech Republic, Germany, Austria, Hungary, and Romania. This challenge focuses on predicting the sales of each selected warehouse inventory for the next 14 days.
+  </p>
+  <p>
+    I participated in this competition with my friends Venkatesh and Vishnu. While we didn’t rank high, we had a lot of fun and learned a lot.
+  </p>
+  <p><strong>Final Result:</strong> 271 out of 777. Public score: 20.86121, Private score: 20.24298.</p>
+  <p>
+    🔗 <a href="https://www.kaggle.com/code/venkytheknown/team-403-rohlik-sales-forecasting" target="_blank">Final Submission on Kaggle</a><br>
+    🔗 <a href="https://www.kaggle.com/competitions/rohlik-sales-forecasting-challenge-v2/overview" target="_blank">Competition Overview</a>
+  </p>
+  <p>
+    Our final submission used a LightGBM-based model with features like temporal patterns, seasonal trends, and warehouse-specific behaviors. We also added a multiplier (1.05) to account for year-over-year sales growth.
+  </p>
+  <p>
+    We tried XGBoost and CatBoost, but LightGBM gave better results. We believe combining all three could have further improved our CV scores.
+  </p>
 
-  <h2>Overview</h2>
+  <h3>Missed Opportunities</h3>
   <ul>
-    <li>📊 Exploratory Data Analysis</li>
-    <li>🧠 Feature Engineering</li>
-    <li>📈 Model Development (XGBoost, LightGBM, Time Series)</li>
-    <li>📝 Kaggle Submission & Evaluation</li>
+    <li>We skipped lag features and log transformations that had helped in other models.</li>
+    <li>Using moving averages to fill nulls could have helped.</li>
   </ul>
 
-  <h2>Download Final Model</h2>
-  <a class="download-btn" href="Final%20Rohlik%20Model.zip" download>
-    ⬇️ Download Final Rohlik Model (.zip)
+  <h3>Approaches That Didn’t Work</h3>
+  <ul>
+    <li>Adding more features didn’t help</li>
+    <li>Training on MAE gave bad results</li>
+    <li>Cosine/sine time features worsened performance</li>
+  </ul>
+
+  <h3>Key Takeaways</h3>
+  <ul>
+    <li>Decision trees struggle with extrapolation</li>
+    <li>Our simple multiplier adjustment gave solid improvements</li>
+  </ul>
+
+  <p>
+    We’ve attached our final file and other models in this GitHub repo. We hope this helps others in their forecasting work!
+  </p>
+
+  <a class="download-button" href="Rohlik%20Sales%20Forecasting%20Challenge%20-%20Team403.zip" download>
+    📦 Download Final Rohlik Model
   </a>
-
-  <h2>Repository Contents</h2>
-  <ul>
-    <li><code>Rohlik - Data Analysis and Feature Engineering.ipynb</code></li>
-    <li><code>Rohlik - Forecasting Models.ipynb</code></li>
-    <li><code>Final Rohlik Model.zip</code></li>
-    <li><code>README.md</code></li>
-  </ul>
-
-  <h2>How to Use</h2>
-  <p>Clone the repository, explore the notebooks, or download the final model above. This project includes detailed data cleaning, modeling, and evaluation steps.</p>
-
-  <h2>License</h2>
-  <p>MIT License – feel free to use and adapt the code for your own forecasting tasks.</p>
 </body>
 </html>
